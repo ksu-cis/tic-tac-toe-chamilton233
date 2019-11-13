@@ -16,12 +16,11 @@
                 {
                     @if (Model.Board[x, y] == null)
                     {
-                        <input type="radio" name="move" class="cell" />
+                        <input type="radio" name="move" value="cell-@x-@y" class="cell" />
                     }
                     else
                     {
-                        <input type="text" name="cell-@x-@y" value="@Model.Board[x, y]" class="cell" readonly />
-                        
+                        <div class="cell">@Model.Board[x,y]</div>
                     }
                 }
             </div>
